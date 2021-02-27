@@ -8,28 +8,10 @@ public class Principal {
 	public static void main(String[] args) {
 		System.out.println("INICIO");
 
-		//Funcionario(Nome, Cargo, Salario);
-		//Nome
-		// [[ , , ],
-		//  [ , , , ],
-		//  [ , ],
-		//    ...[]]
-		
-		//String funcionario1 = "";
-		//String funcionario2 = "";
-		//[[null, null, null], [null, null, null], [null, null, null], [null, null, null], [null, null, null]]
-		String[][] funcionarios = new String[5][3];
-//		String[] cargos = new String[5];
-//		String[] salarios = new String[5];
+		Funcionario[] funcionarios = new Funcionario[5];
 
 		//Leitor do console
 		Scanner terminal = new Scanner(System.in);
-		
-		//ler
-		String linha = terminal.nextLine();
-		//imprimir
-		System.out.println("LINHA: "+linha);
-		
 		
 		String nome ="";
 		String cargo ="";
@@ -40,27 +22,27 @@ public class Principal {
 			System.out.print("NOME: ");
 			nome = terminal.nextLine();
 			if(!nome.equals("SAIR")) {
-				funcionarios[index][0] = nome;
+				funcionarios[index] = new Funcionario();
+				funcionarios[index].nome = nome;
 				System.out.print("CARGO: ");
 				cargo = terminal.nextLine();
-				funcionarios[index][1] = cargo;
+				funcionarios[index].cargo = cargo;
 				System.out.print("SALARIO: ");
 				salario = terminal.nextLine();
-				funcionarios[index][2] = salario;
+				funcionarios[index].salario = Double.parseDouble(salario);
 				index = index + 1; //index++
 			}
 		}
+		
+		//Processamento aqui
 		
 		
 		//IMPRIMIR
 		//TODO REESCREVA ESSE FOR PARA WHILE
 		System.out.println("LISTA FUNCIONARIOS");
 		System.out.println("NOME | CARGO | SALARIO");
-		for (int i = 0; funcionarios[i][0]!=null; i++) {
-			for (int j = 0; j < funcionarios[i].length ; j++) { //j < 3
-				System.out.print(funcionarios[i][j] +"  ");
-			}
-			System.out.println();
+		for (int i = 0; funcionarios[i]!=null; i++) {
+			System.out.println(funcionarios[i].nome +" "+funcionarios[i].cargo+" "+funcionarios[i].salario);
 		}
 		
 		
