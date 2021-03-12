@@ -65,7 +65,7 @@ public class Aluno /*extends Object*/ {
 		return matricula;
 	}
 	
-	public void adcionarDisciplina(Disciplina disciplina) {
+	public void adicionarDisciplina(Disciplina disciplina) {
 		if( semestre >= disciplina.getSemestre()) {
 			matricula[index] = disciplina;
 			index++;

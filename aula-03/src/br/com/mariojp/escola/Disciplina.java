@@ -6,6 +6,13 @@ public class Disciplina {
 	
 	private int semestre;
 	
+	
+
+	public Disciplina(String nome, int semestre) {
+		super();
+		this.nome = nome;
+		this.semestre = semestre;
+	}
 
 	public String getNome() {
 		return nome.toUpperCase();
