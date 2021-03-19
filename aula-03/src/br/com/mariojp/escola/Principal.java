@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import br.com.mariojp.escola.modelo.Aluno;
+import br.com.mariojp.escola.modelo.Disciplina;
+
 public class Principal {
 
 	public static void main(String[] args) {
@@ -12,10 +15,12 @@ public class Principal {
 		Scanner scanner = new Scanner(System.in);
 
 		// Lista de Alunos
-		List<Aluno> lista = new ArrayList<>();
+		//Aluno[] lista = new Aluno[99];
+		//ArrayList
+		ArrayList<Aluno> lista = new ArrayList<>();
 		
 		
-		List<Disciplina> disciplinas = new ArrayList<>();
+		ArrayList<Disciplina> disciplinas = new ArrayList<>();
 
 
 		// opção do menu

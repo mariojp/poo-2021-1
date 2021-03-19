@@ -1,4 +1,4 @@
-package br.com.mariojp.escola;
+package br.com.mariojp.escola.modelo;
 
 public class Aluno /*extends Object*/ {
 
